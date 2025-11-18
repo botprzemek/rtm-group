@@ -1,0 +1,12 @@
+{
+    "pages": {
+        "index": {
+            "title": "Witamy"
+        }
+    },
+    "components": {
+        "section": {
+            "footer": {}
+        }
+    }
+}

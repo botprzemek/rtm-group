@@ -1,0 +1,8 @@
+services:
+    form:
+        build: .
+        image: basketball/form:latest
+        pull_policy: never
+        container_name: basketball-form
+        ports:
+            - "0.0.0.0:80:3000"

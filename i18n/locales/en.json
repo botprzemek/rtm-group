@@ -1,0 +1,49 @@
+{
+    "$schema": "",
+    "test": "",
+    "pages": {
+        "index": {
+            "title": "Welcome",
+            "sections": {
+                "hero": {
+                    "title": "Built to Impress.{br} Made to Last."
+                },
+                "cta": {
+                    "sup": "Trusted by many",
+                    "title": "Bring your dreams into reality",
+                    "sub": "Make your ideas come true with our experience",
+                    "buttons": ["More information", "Request a quote"]
+                }
+            }
+        }
+    },
+    "components": {
+        "navigation": {
+            "menu": {
+                "item": ["Home", "Projects", "Company", "Careers", "Contact"]
+            }
+        },
+        "footer": {
+            "sections": [
+                {
+                    "title": "Home",
+                    "links": ["Welcome1", "Latest projects", "Todo"]
+                },
+                {
+                    "title": "Company",
+                    "links": ["Welcome2", "Latest projects", "Todo"]
+                },
+                {
+                    "title": "Contact",
+                    "links": ["Welcome3", "Latest projects", "Todo"]
+                }
+            ],
+            "get-in-touch": {
+                "title": "Get in touch",
+                "description": "We would love to hear from you!"
+            },
+            "additional": ["Privacy Policy", "Terms of Use", "Accessibility"],
+            "all-rights-reserved": "All rights reserved"
+        }
+    }
+}
