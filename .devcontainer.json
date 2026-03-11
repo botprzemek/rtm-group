@@ -40,6 +40,8 @@
                 "editor.stickyScroll.enabled": true,
                 "editor.guides.indentation": false,
 
+                "editor.tabSize": 4,
+
                 "editor.fontLigatures": false,
                 "editor.lineHeight": 1.6,
                 "editor.cursorBlinking": "solid",
@@ -115,8 +117,8 @@
 
                 "rust-analyzer.check.command": "clippy",
                 "rust-analyzer.cargo.buildScripts.enable": true,
-                "javascript.suggest.completeFunctionCalls": true,
-                "typescript.preferences.importModuleSpecifier": "non-relative"
+                "#js/ts.suggest.completeFunctionCalls#": true,
+                "#js/ts.preferences.importModuleSpecifier#": "non-relative"
             }
         }
     }
