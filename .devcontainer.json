@@ -1,16 +1,17 @@
 {
+    "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.schema.json",
     "name": "rtm-group",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/devcontainers/features/node:1": {},
-        "ghcr.io/devcontainers/features/rust:1": {}
+        "ghcr.io/devcontainers/features/rust:1": {},
     },
-    "postStartCommand": "npm install",
+    "postStartCommand": "npm install && echo 'npm run precommit' > .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
     "remoteUser": "vscode",
     "forwardPorts": [3000],
     "portsAttributes": { "0.0.0.0:3000": { "label": "Web Application" } },
     "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+        "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
     ],
     "customizations": {
         "vscode": {
@@ -26,7 +27,7 @@
                 "rust-lang.rust-analyzer",
                 "tamasfe.even-better-toml",
                 "vitest.explorer",
-                "Vue.volar"
+                "Vue.volar",
             ],
             "settings": {
                 // RICING
@@ -100,13 +101,13 @@
                 "files.exclude": {
                     "**/.nuxt": true,
                     "**/.output": true,
-                    "**/node_modules": true
+                    "**/node_modules": true,
                 },
                 "editor.defaultFormatter": "oxc.oxc-vscode",
                 "editor.codeActionsOnSave": {
                     "source.organizeImports": "never",
                     "source.fixAll.oxc": "always",
-                    "source.fixAll": "always"
+                    "source.fixAll": "always",
                 },
                 "oxc.enable": true,
                 "oxc.enable.oxfmt": true,
@@ -118,8 +119,8 @@
                 "rust-analyzer.check.command": "clippy",
                 "rust-analyzer.cargo.buildScripts.enable": true,
                 "#js/ts.suggest.completeFunctionCalls#": true,
-                "#js/ts.preferences.importModuleSpecifier#": "non-relative"
-            }
-        }
-    }
+                "#js/ts.preferences.importModuleSpecifier#": "non-relative",
+            },
+        },
+    },
 }
