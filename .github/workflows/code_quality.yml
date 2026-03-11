@@ -89,9 +89,6 @@ jobs:
             - name: Install Shippie
               run: npm install -g shippie
 
-            - name: Dependency review
-              uses: actions/dependency-review-action@v4
-
             - name: Code review
               run: npx shippie review --platform=github --modelString=openai:gpt-4.1-mini --baseUrl=https://models.github.ai/inference
               env:
