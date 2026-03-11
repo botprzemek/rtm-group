@@ -2,7 +2,6 @@ name: Scan for leaked credentials
 
 on:
     push:
-    pull_request:
 
 jobs:
     security:

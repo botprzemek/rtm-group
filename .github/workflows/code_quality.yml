@@ -2,7 +2,6 @@ name: Parse and review code
 
 on:
     push:
-    pull_request:
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
