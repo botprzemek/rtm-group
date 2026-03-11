@@ -13,7 +13,8 @@
         "fmt:check": "oxfmt --check",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
-        "lint:github": "oxlint --format=github"
+        "lint:github": "oxlint --format=github",
+        "precommit": "oxfmt --write && oxlint --deny-warnings"
     },
     "devDependencies": {
         "@nuxt/fonts": "0.14.0",

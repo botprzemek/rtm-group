@@ -1,11 +1,12 @@
 {
+    "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.schema.json",
     "name": "rtm-group",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/devcontainers/features/rust:1": {}
     },
-    "postStartCommand": "npm install",
+    "postStartCommand": "npm install && echo 'npm run precommit' > .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit && git config --global sequence.editor \"code --wait\"",
     "remoteUser": "vscode",
     "forwardPorts": [3000],
     "portsAttributes": { "0.0.0.0:3000": { "label": "Web Application" } },
@@ -29,7 +30,6 @@
                 "Vue.volar"
             ],
             "settings": {
-                // RICING
                 "editor.detectIndentation": false,
                 "editor.minimap.enabled": false,
                 "editor.fontFamily": "Jetbrains Mono, monospace",
@@ -39,6 +39,8 @@
 
                 "editor.stickyScroll.enabled": true,
                 "editor.guides.indentation": false,
+
+                "editor.tabSize": 4,
 
                 "editor.fontLigatures": false,
                 "editor.lineHeight": 1.6,
@@ -62,7 +64,6 @@
                 "workbench.secondarySideBar.defaultVisibility": "hidden",
                 "workbench.tips.enabled": false,
 
-                // TERMINAL
                 "dev.containers.showLogsAfterRefresh": false,
 
                 "task.showOutput": "never",
@@ -85,7 +86,6 @@
                 "terminal.integrated.softWrapping": false,
                 "terminal.integrated.wordWrap": "off",
 
-                // CHAT
                 "chat.agent.enabled": false,
                 "chat.agentsControl.enabled": false,
                 "chat.checkpoints.enabled": false,
@@ -93,7 +93,6 @@
                 "chat.tips.enabled": false,
                 "chat.disableAIFeatures": true,
 
-                // LINTER AND FORMATTER
                 "files.autoSave": "onFocusChange",
                 "files.exclude": {
                     "**/.nuxt": true,
@@ -115,8 +114,8 @@
 
                 "rust-analyzer.check.command": "clippy",
                 "rust-analyzer.cargo.buildScripts.enable": true,
-                "javascript.suggest.completeFunctionCalls": true,
-                "typescript.preferences.importModuleSpecifier": "non-relative"
+                "#js/ts.suggest.completeFunctionCalls#": true,
+                "#js/ts.preferences.importModuleSpecifier#": "non-relative"
             }
         }
     }
