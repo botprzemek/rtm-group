@@ -21,7 +21,7 @@ jobs:
             part: ${{ steps.version.outputs.part }}
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             - name: Bump release version and push tag
               id: version
