@@ -21,7 +21,7 @@
         "@nuxt/test-utils": "4.0.0",
         "@nuxtjs/i18n": "10.2.3",
         "@nuxtjs/seo": "3.4.0",
-        "@tailwindcss/vite": "4.2.1",
+        "@tailwindcss/vite": "4.2.2",
         "nuxt": "4.3.1",
         "oxfmt": "0.42.0",
         "oxlint": "1.53.0",
