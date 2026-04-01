@@ -19,7 +19,7 @@
     "devDependencies": {
         "@nuxt/fonts": "0.14.0",
         "@nuxt/test-utils": "4.0.0",
-        "@nuxtjs/i18n": "10.2.3",
+        "@nuxtjs/i18n": "10.2.4",
         "@nuxtjs/seo": "3.4.0",
         "@tailwindcss/vite": "4.2.2",
         "nuxt": "4.3.1",
