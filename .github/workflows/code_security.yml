@@ -11,7 +11,7 @@ jobs:
               uses: actions/checkout@v6
 
             - name: TruffleHog OSS
-              uses: trufflesecurity/trufflehog@v3.94.0
+              uses: trufflesecurity/trufflehog@v3.94.1
 
             # - name: Test for public javascript library vulnerabilities
             #   uses: lirantal/is-website-vulnerable@main
