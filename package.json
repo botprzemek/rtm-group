@@ -28,7 +28,7 @@
         "oxlint-tsgolint": "0.17.3",
         "tailwindcss": "4.2.1",
         "vitest": "4.1.1",
-        "vue": "3.5.30",
+        "vue": "3.5.31",
         "vue-router": "5.0.3"
     }
 }
